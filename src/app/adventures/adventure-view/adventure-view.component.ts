@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./adventure-view.component.sass']
 })
 export class AdventureViewComponent {
+	adventure
 }

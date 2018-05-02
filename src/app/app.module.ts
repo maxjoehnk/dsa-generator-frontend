@@ -11,6 +11,14 @@ import { CharactersModule } from './characters/characters.module';
 import { AdventuresModule } from './adventures/adventures.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+export function loadCharacters() {
+	return CharactersModule;
+}
+
+export function loadAdventures() {
+	return AdventuresModule;
+}
+
 const routes: Routes = [
 	{
 		path: '',
@@ -18,11 +26,11 @@ const routes: Routes = [
 	},
 	{
 		path: 'characters',
-		loadChildren: () => CharactersModule
+		loadChildren: loadCharacters
 	},
 	{
 		path: 'adventures',
-		loadChildren: () => AdventuresModule
+		loadChildren: loadAdventures
 	}
 ];
 
