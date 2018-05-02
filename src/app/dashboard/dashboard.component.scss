@@ -1,0 +1,40 @@
+.fab {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+
+	mat-icon {
+		transition: all 0.1s linear;
+	}
+
+	&.expanded button[mat-fab] mat-icon {
+		transform: rotate(45deg);
+	}
+
+	.expandable {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		[mat-mini-fab] {
+			transition: all 0.1s ease-in-out;
+			margin-bottom: 16px;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	&:not(.expanded) .expandable [mat-mini-fab] {
+		opacity: 0;
+		pointer-events: none;
+		&:nth-child(3) {
+			transform: translateY(64px);
+		}
+		&:nth-child(2) {
+			transform: translateY(120px);
+		}
+		&:nth-child(1) {
+			transform: translateY(176px);
+		}
+	}
+}

@@ -1,2 +1,2 @@
-export interface Adventure {
+export interface DSA5Adventure {
 }

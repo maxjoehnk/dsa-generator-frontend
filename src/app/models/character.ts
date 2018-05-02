@@ -1,2 +1,2 @@
-export interface Character {
+export interface DSA5Character {
 }

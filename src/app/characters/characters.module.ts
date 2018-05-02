@@ -4,8 +4,13 @@ import { CharacterListComponent } from './character-list/character-list.componen
 import { CharacterViewComponent } from './character-view/character-view.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonsModule } from '../commons.module';
+import { CharacterCreationComponent } from './character-creation/character-creation.component';
 
 const routes: Routes = [
+	{
+		path: 'new',
+		component: CharacterCreationComponent
+	},
 	{
 		path: ':id',
 		component: CharacterViewComponent
@@ -20,7 +25,8 @@ const routes: Routes = [
 	],
 	declarations: [
 		CharacterListComponent,
-		CharacterViewComponent
+		CharacterViewComponent,
+		CharacterCreationComponent
 	],
 	exports: [
 		CharacterListComponent

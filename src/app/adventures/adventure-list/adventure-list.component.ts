@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Adventure } from '../../models/adventure';
+import { DSA5Adventure } from '../../models/adventure';
 
 @Component({
 	selector: 'dsa-adventure-list',
@@ -9,7 +9,7 @@ import { Adventure } from '../../models/adventure';
 export class AdventureListComponent implements OnInit {
 
 	@Input()
-	adventures: Adventure[];
+	adventures: DSA5Adventure[];
 
 	constructor() {
 	}

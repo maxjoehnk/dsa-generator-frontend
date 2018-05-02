@@ -17,11 +17,11 @@ const routes: Routes = [
 		component: DashboardComponent
 	},
 	{
-		path: 'character',
+		path: 'characters',
 		loadChildren: () => CharactersModule
 	},
 	{
-		path: 'adventure',
+		path: 'adventures',
 		loadChildren: () => AdventuresModule
 	}
 ];

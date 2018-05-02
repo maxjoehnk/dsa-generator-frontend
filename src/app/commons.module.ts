@@ -4,9 +4,10 @@ import {
 	MatDividerModule,
 	MatIconModule,
 	MatInputModule,
-	MatListModule,
+	MatListModule, MatSelectModule,
 	MatTabsModule,
-	MatToolbarModule
+	MatToolbarModule,
+	MatTooltipModule
 } from '@angular/material';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -25,7 +26,9 @@ import { CommonModule } from '@angular/common';
 		MatDividerModule,
 		MatTabsModule,
 		MatInputModule,
-		MatIconModule
+		MatIconModule,
+		MatTooltipModule,
+		MatSelectModule
 	],
 	declarations: []
 })

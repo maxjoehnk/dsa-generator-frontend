@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Character } from '../../models/character';
+import { DSA5Character } from '../../models/character';
 
 @Component({
 	selector: 'dsa-character-list',
@@ -9,7 +9,7 @@ import { Character } from '../../models/character';
 export class CharacterListComponent implements OnInit {
 
 	@Input()
-	characters: Character[];
+	characters: DSA5Character[];
 
 	constructor() {
 	}
