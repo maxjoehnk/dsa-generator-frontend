@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <span>Dashboard</span>
+</mat-toolbar>
+<mat-list>
+    <h3 mat-subheader>Abenteuer</h3>
+    <dsa-adventure-list [adventures]="adventures$ | async"></dsa-adventure-list>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader>Helden</h3>
+    <dsa-character-list [characters]="characters$ | async"></dsa-character-list>
+</mat-list>
+<button mat-fab class="add-btn">
+    <mat-icon fontSet="mdi" fontIcon="mdi-plus" class="mdi-24px"></mat-icon>
+</button>

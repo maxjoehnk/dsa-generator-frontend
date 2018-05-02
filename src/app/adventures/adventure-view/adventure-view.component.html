@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button routerLink="/dashboard">
+        <mat-icon fontSet="mdi" fontIcon="mdi-arrow-left" class="mdi-24px"></mat-icon>
+    </button>
+    <span>{{(adventure | async)?.name}}</span>
+</mat-toolbar>
+<mat-tab-group color="primary">
+    <mat-tab>
+        <ng-template mat-tab-label>Overview</ng-template>
+        <ng-template mat-tab-content>
+
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>Helden</ng-template>
+        <ng-template mat-tab-content>
+            <mat-list>
+                <mat-list-item *ngFor="let character of (adventure | async)?.characters">
+                    <h3 mat-line class="primary">{{character.name}}</h3>
+                    <p mat-line class="secondary">{{character.user.name}}</p>
+                </mat-list-item>
+            </mat-list>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>
