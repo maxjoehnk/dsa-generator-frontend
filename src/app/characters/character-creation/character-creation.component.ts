@@ -12,8 +12,15 @@ export class CharacterCreationComponent {
 
 	remaining = 0;
 	levels$: Observable<DSA5Level[]>;
+	level: DSA5Level;
 
 	constructor(private firestore: AngularFirestore) {
-		this.levels$ = this.firestore.collection<DSA5Level>('games/dsa5/levels').valueChanges();
+		this.levels$ = this.firestore.collection<DSA5Level>('games/dsa5/levels')
+			.valueChanges()
+			.map(levels => levels.sort((a, b) => a.adventurePoints - b.adventurePoints));
+	}
+
+	recalculate() {
+		this.remaining = this.level.adventurePoints;
 	}
 }

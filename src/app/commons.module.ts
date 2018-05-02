@@ -12,12 +12,14 @@ import {
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
 	imports: [
 		CommonModule
 	],
 	exports: [
+		SharedModule,
 		AngularFirestoreModule,
 		AngularFireAuthModule,
 		MatListModule,

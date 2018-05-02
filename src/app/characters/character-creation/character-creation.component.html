@@ -1,12 +1,18 @@
 <mat-toolbar color="primary">
+	<a mat-icon-button routerLink="../../">
+		<mat-icon fontSet="mdi"
+				  fontIcon="mdi-close"
+				  class="mdi-24px"></mat-icon>
+	</a>
 	<span>Neuer Charakter</span>
+	<span style="flex: 1"></span>
 	<span>{{remaining}} AP verfügbar</span>
 </mat-toolbar>
 <div style="padding: 16px;">
 	<mat-form-field>
-		<mat-select placeholder="Erfahrungsgrad">
+		<mat-select placeholder="Erfahrungsgrad" [(ngModel)]="level" (ngModelChange)="recalculate()">
 			<mat-option *ngFor="let level of levels$ | async"
-						[value]="level">{{level.name.de-DE}}</mat-option>
+						[value]="level">{{level.name | translate}}</mat-option>
 		</mat-select>
 	</mat-form-field>
 </div>

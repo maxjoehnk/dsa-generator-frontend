@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
 			if (!this.auth.auth.currentUser) {
 				await this.auth.auth.signInAnonymously();
 			}
+			console.log(this.auth.auth.currentUser.uid);
 		}catch (err) {
 			console.error(err);
 		}
