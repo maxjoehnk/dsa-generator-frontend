@@ -25,7 +25,7 @@ script:
   - xvfb-run -a yarn test --single-run --no-progress --browser=ChromeNoSandbox
 
 before_deploy:
-  - yarn build
+  - yarn build --no-progress
 
 deploy:
   provider: firebase
