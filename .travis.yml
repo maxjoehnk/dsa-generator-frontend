@@ -29,6 +29,7 @@ before_deploy:
 
 deploy:
   provider: firebase
+  skip_cleanup: true
   on:
     branch: develop
   token:
