@@ -1,5 +1,14 @@
 <mat-toolbar color="primary">
 	<span>Dashboard</span>
+	<span style="flex: 1"></span>
+	<button mat-button
+			(click)="login()">
+		Login
+	</button>
+	<button mat-button
+			(click)="signup()">
+		Signup
+	</button>
 </mat-toolbar>
 <mat-list>
 	<h3 mat-subheader>Abenteuer</h3>
@@ -17,35 +26,27 @@
 		   matTooltip="Held"
 		   matTooltipPosition="before"
 		   routerLink="/characters/new">
-			<mat-icon fontSet="mdi"
-					  fontIcon="mdi-account"
-					  class="mdi-24px">
+			<mat-icon svgIcon="account">
 			</mat-icon>
 		</a>
 		<a mat-mini-fab
 		   matTooltip="Abenteuer"
 		   matTooltipPosition="before"
 		   routerLink="/adventures/new">
-			<mat-icon fontSet="mdi"
-					  fontIcon="mdi-book"
-					  class="mdi-24px">
+			<mat-icon svgIcon="book">
 			</mat-icon>
 		</a>
 		<a mat-mini-fab
 		   matTooltip="NPC"
 		   matTooltipPosition="before"
 		   routerLink="/npcs/new">
-			<mat-icon fontSet="mdi"
-					  fontIcon="mdi-gamepad-variant"
-					  class="mdi-24px">
+			<mat-icon svgIcon="gamepad-variant">
 			</mat-icon>
 		</a>
 	</div>
 	<button mat-fab
 			(click)="toggle()">
-		<mat-icon fontSet="mdi"
-				  fontIcon="mdi-plus"
-				  class="mdi-24px">
+		<mat-icon svgIcon="plus">
 		</mat-icon>
 	</button>
 </div>

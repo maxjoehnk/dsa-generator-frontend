@@ -1,8 +1,7 @@
 <mat-nav-list>
     <mat-list-item *ngFor="let character of characters" [routerLink]="['/characters', character.id]">
-        <mat-icon mat-list-avatar fontSet="mdi" fontIcon="mdi-account" class="mdi-24px"></mat-icon>
-        <h3 mat-line class="name">{{character.name}}</h3>
-        <p mat-line class="adventure">{{character.adventure.name}}</p>
-        <p mat-line class="game">{{character.game.name | translate}}</p>
+        <mat-icon matListAvatar svgIcon="account"></mat-icon>
+        <h3 matLine class="name">{{character.name}}</h3>
+        <p matLine class="game">{{character.game?.name | translate}}</p>
     </mat-list-item>
 </mat-nav-list>

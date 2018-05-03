@@ -7,6 +7,7 @@ import { DSA5Adventure } from '../models/adventure';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/observable/of';
+import * as firebase from 'firebase/app';
 
 @Component({
 	selector: 'dsa-dashboard',
@@ -30,5 +31,29 @@ export class DashboardComponent {
 
 	toggle() {
 		this.expanded = !this.expanded;
+	}
+
+	async login() {
+		try {
+			await this.auth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+		}catch (err) {
+			console.error(err);
+		}
+	}
+
+	async signup() {
+		try {
+			await this.auth.auth.currentUser.linkWithPopup(new firebase.auth.GoogleAuthProvider());
+		}catch (err) {
+			console.error(err);
+		}
+	}
+
+	async logout() {
+		try {
+			await this.auth.auth.signOut();
+		}catch (err) {
+			console.error(err);
+		}
 	}
 }
